@@ -1,0 +1,29 @@
+{
+  "name": "upload-s3-ec2-rds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn clean && tsc && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "dev": "nodemon src/index.ts",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1353.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.15.0",
+    "path": "^0.12.7",
+    "pg": "^8.10.0",
+    "typeorm": "^0.3.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.0",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.1",
+    "tscpaths": "^0.0.9",
+    "tslint": "^6.1.3",
+    "typescript": "^4.9.3"
+  }
+}
